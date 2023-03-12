@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/matrikelnummer"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/immatrikulation_eingabe_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@id/titel"
+            app:layout_constraintStart_toStartOf="@+id/titel"
+            app:layout_constraintTop_toBottomOf="@+id/titel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/eingabefeld_immatrikulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nummer"
+                android:inputType="number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/serverantwort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/immatrikulation_eingabe_layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/immatrikulation_eingabe_layout"
+            app:layout_constraintTop_toBottomOf="@id/immatrikulation_eingabe_layout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="gesendet"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/serverantwort"
+            app:layout_constraintStart_toStartOf="@+id/serverantwort"
+            app:layout_constraintTop_toBottomOf="@+id/serverantwort" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/berechnung"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Berechnungsschaltfläche"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/serverantwort"
+            app:layout_constraintStart_toStartOf="@+id/serverantwort"
+            app:layout_constraintTop_toBottomOf="@+id/send_button" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/berechnungsergebnis"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/immatrikulation_eingabe_layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/immatrikulation_eingabe_layout"
+            app:layout_constraintTop_toBottomOf="@id/berechnung"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

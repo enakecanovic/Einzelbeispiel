@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NetworkSocketPort</string>
+
+    <string name="matrikelnummer">Geben Sie Ihre gültige Matrikelnummer ein</string>
+</resources>
